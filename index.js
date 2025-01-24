@@ -61,5 +61,21 @@ const getItemsByCategory = (array, categoryString) => {
 // getItemsByCategory(groceryList, `dairy`);
 
 //Takes in an array of items and returns the total quantity of all items.
+const countItems = (array) => {
+  totalQuantity = array.reduce((accumulator, item) => {
+    return accumulator + item.quantity;
+  },0);
+  console.log(totalQuantity);
+}
+
+// countItems(groceryList);
 
 //Takes in an array of items and returns the cost of all given items.
+const calculateTotalPrice = (array) => {
+  totalPrice = array.reduce((accumulator, item) => {
+    return accumulator + (item.price * item.quantity);
+  },0);
+  console.log(totalPrice);
+}
+
+// calculateTotalPrice(groceryList);
